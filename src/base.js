@@ -1,4 +1,6 @@
 
+import semver from "semver";
+
 export default class PluginBase {
 
     constructor(injector) {
@@ -6,7 +8,15 @@ export default class PluginBase {
         this.initialize();
     }
 
-    initialize() {
+    initialize() {}
+
+    getCompatibleVersion() {
+        throw new Error('You must to override this method');
+    }
+
+    checkVersion() {
+        let compatibleVersion = this.getCompatibleVersion();
+        return semver.satisfies(this.injector.version, compatibleVersion);
     }
 
     getDefaultOptions() {
