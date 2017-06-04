@@ -21,7 +21,11 @@ export default class PluginBase {
         return this.injector.getConfig();
     }
 
+    get debug() {
+        return this.injector.debug;
+    }
+
     get Promise() {
-        return this.injector.Promise();
+        return this.injector.Promise;
     }
 }
