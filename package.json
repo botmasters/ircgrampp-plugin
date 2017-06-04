@@ -1,12 +1,13 @@
 {
   "name": "ircgrampp-plugin",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "description": "ircgrampp plugin base",
   "main": "lib/index.js",
   "scripts": {
     "test": "./node_modules/.bin/gulp gulp test",
     "lint": "./node_modules/.bin/gulp lint",
-    "build": "./node_modules/.bin/gulp build"
+    "build": "./node_modules/.bin/gulp build",
+    "prepublish": "npm run build"
   },
   "keywords": [
     "ircgrampp",
@@ -15,6 +16,11 @@
     "plugin",
     "plugins"
   ],
+  "bugs": "https://github.com/botmasters/ircgrampp/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/botmasters/ircgrampp.git"
+  },
   "author": "Botmasters",
   "license": "GPL-2.0",
   "devDependencies": {
