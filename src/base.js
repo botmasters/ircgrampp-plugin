@@ -19,10 +19,6 @@ export default class PluginBase {
         return semver.satisfies(this.injector.version, compatibleVersion);
     }
 
-    getDefaultOptions() {
-        return {};
-    }
-
     get injector() {
         return this.__injector;
     }
@@ -37,5 +33,9 @@ export default class PluginBase {
 
     get Promise() {
         return this.injector.Promise;
+    }
+
+    static getDefaultOptions() {
+        return {};
     }
 }
